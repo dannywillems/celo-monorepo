@@ -1,7 +1,7 @@
 const AnsiToHtml = require('ansi-to-html')
 const convert = new AnsiToHtml()
 
-//TODO(Alec): translate everything to typescript
+//TODO(Alec, nth): translate everything to typescript
 
 const getTestTitles = (test) => {
   const titles = []
