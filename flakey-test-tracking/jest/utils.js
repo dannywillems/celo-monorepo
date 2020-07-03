@@ -43,8 +43,6 @@ const buildFlakeyDescribe = (describeBlock, flakeMap) => {
         }
         break
       }
-      default:
-        break
     }
   }
   return describeBlock

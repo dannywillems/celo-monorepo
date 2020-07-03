@@ -51,9 +51,9 @@ class FlakeTrackingEnvironment extends NodeEnvironment {
           let errors = []
           let prevErrors = this.global.FLAKES.get(testID)
           if (prevErrors !== undefined) {
-            errors.push(prevErrors)
+            errors.push(...prevErrors)
           }
-          errors.push(event.test.errors)
+          errors.push(...event.test.errors)
           this.global.FLAKES.set(testID, errors)
         }
       }

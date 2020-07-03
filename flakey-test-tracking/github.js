@@ -8,6 +8,7 @@ const Client = Octokit.plugin(retry)
 // '' with new lines replaced
 // "" with new lines
 // "" with new lines replaced
+// new lines replaced
 
 const FlakeLabel = 'FLAKEY :snowflake:'
 const defaults = {
