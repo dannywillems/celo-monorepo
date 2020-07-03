@@ -46,7 +46,9 @@ class GitHub {
   static async build() {
     const app = new App({
       id: 71131,
-      privateKey: process.env.FLAKE_TRACKER_SECRET.replace(/\\n/gm, '\n'),
+      //privateKey: process.env.FLAKE_TRACKER_SECRET.replace(/\\n/gm, '\n'),
+      privateKey: process.env.FLAKE_TRACKER_SECRET,
+      //privateKey: privateKey,
     })
 
     const rest = await startClient(app)
