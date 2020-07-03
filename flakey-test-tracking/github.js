@@ -3,6 +3,12 @@ const { App } = require('@octokit/app')
 const { retry } = require('@octokit/plugin-retry')
 const Client = Octokit.plugin(retry)
 
+// Tried
+// '' with new lines
+// '' with new lines replaced
+// "" with new lines
+// "" with new lines replaced
+
 const FlakeLabel = 'FLAKEY :snowflake:'
 const defaults = {
   owner: process.env.CIRCLE_PROJECT_USERNAME || 'celo-org',
@@ -46,8 +52,8 @@ class GitHub {
   static async build() {
     const app = new App({
       id: 71131,
-      //privateKey: process.env.FLAKE_TRACKER_SECRET.replace(/\\n/gm, '\n'),
-      privateKey: process.env.FLAKE_TRACKER_SECRET,
+      privateKey: process.env.FLAKE_TRACKER_SECRET.replace(/\\n/gm, '\n'),
+      //privateKey: process.env.FLAKE_TRACKER_SECRET,
       //privateKey: privateKey,
     })
 
