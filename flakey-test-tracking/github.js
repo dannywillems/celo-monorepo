@@ -3,13 +3,6 @@ const { App } = require('@octokit/app')
 const { retry } = require('@octokit/plugin-retry')
 const Client = Octokit.plugin(retry)
 
-// Tried
-// '' with new lines
-// '' with new lines replaced
-// "" with new lines
-// "" with new lines replaced
-// new lines replaced
-
 const FlakeLabel = 'FLAKEY :snowflake:'
 const defaults = {
   owner: process.env.CIRCLE_PROJECT_USERNAME || 'celo-org',
